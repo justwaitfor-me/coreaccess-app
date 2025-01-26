@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,367;1,367&display=swap");
+
+// Define variables for colors and sizes
+$primary-bg-color: #f8f9fa;
+$dark-bg-color: rgba(255, 255, 255, 0.3);
+$light-bg-color: rgba(0, 0, 0, 0.3);
+$container-max-width: 600px;
+$container-padding: 20px;
+$form-group-margin-bottom: 15px;
+$form-group-bg-color: #282c34;
+$btn-width: 100%;
+$app-width: 80;
+$app-border-radius: 10px;
+$app-header-bg-color: #282c34;
+$app-header-padding: 20px;
+$app-header-color: white;
+$app-logo-height: 40vmin;
+$app-link-color: #043181;
+
+body {
+  font-family: "Exo", serif;
+  font-optical-sizing: auto;
+  font-weight: 440;
+  font-style: normal;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 50px;
+  margin-top: 80px;
+  padding: 0;
+  background-color: $primary-bg-color;
+
+  &.dark {
+    .App {
+      background-color: $dark-bg-color;
+    }
+  }
+
+  &.light {
+    .App {
+      background-color: $light-bg-color;
+    }
+  }
+}
+
+.container {
+  max-width: $container-max-width;
+  margin: auto;
+  padding: $container-padding;
+}
+
+.form-group {
+  margin-bottom: $form-group-margin-bottom;
+  background-color: $form-group-bg-color;
+}
+
+.btn {
+  width: $btn-width;
+}
+
+.App {
+  z-index: 2000;
+  text-align: center;
+  width: $app-width;
+  border-radius: $app-border-radius;
+
+  & .breadcrumb {
+    padding: $app-header-padding;
+    color: $app-header-color;
+
+    padding: 0;
+
+    & li {
+      color: white;
+    }
+  }
+
+  & header {
+    background-color: $app-header-bg-color;
+    padding: $app-header-padding;
+    color: $app-header-color;
+  }
+
+  & .logo {
+    height: $app-logo-height;
+    pointer-events: none;
+  }
+
+  & a {
+    color: $app-link-color;
+    text-decoration: none;
+    font-weight: bolder;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  background-color: #282c34;
+}
+
+.btn {
+  width: 100%;
+}

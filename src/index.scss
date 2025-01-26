@@ -1,0 +1,11 @@
+// src/index.scss
+@import './assets/scss/_background.scss';
+
+
+body.light {
+    color: #000;
+}
+
+body.dark {
+    color: #fff;
+}

@@ -1,0 +1,33 @@
+footer {
+  background-color: transparent;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0;
+}
+footer .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container-fluid .navbar-brand {
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  footer .container-fluid .navbar-brand {
+    font-size: 0.875rem;
+  }
+}
+footer .container-fluid a {
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 0;
+}
+
+body.light footer span {
+  color: #333 !important;
+}
+
+body.dark footer span {
+  color: #fff !important;
+}/*# sourceMappingURL=footer.css.map */

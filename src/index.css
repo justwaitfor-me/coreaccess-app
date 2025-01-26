@@ -1,13 +1,63 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body.dark {
+  background-color: #111;
+  background-image: linear-gradient(to top, #222 5%, #111 6%, #111 7%, transparent 7%), linear-gradient(to bottom, #111 30%, transparent 30%), linear-gradient(to right, #222, #2e2e2e 5%, transparent 5%), linear-gradient(to right, transparent 6%, #222 6%, #2e2e2e 9%, transparent 9%), linear-gradient(to right, transparent 27%, #222 27%, #2e2e2e 34%, transparent 34%), linear-gradient(to right, transparent 51%, #222 51%, #2e2e2e 57%, transparent 57%), linear-gradient(to bottom, #111 35%, transparent 35%), linear-gradient(to right, transparent 42%, #222 42%, #2e2e2e 44%, transparent 44%), linear-gradient(to right, transparent 45%, #222 45%, #2e2e2e 47%, transparent 47%), linear-gradient(to right, transparent 48%, #222 48%, #2e2e2e 50%, transparent 50%), linear-gradient(to right, transparent 87%, #222 87%, #2e2e2e 91%, transparent 91%), linear-gradient(to bottom, #111 37.5%, transparent 37.5%), linear-gradient(to right, transparent 14%, #222 14%, #2e2e2e 20%, transparent 20%), linear-gradient(to bottom, #111 40%, transparent 40%), linear-gradient(to right, transparent 10%, #222 10%, #2e2e2e 13%, transparent 13%), linear-gradient(to right, transparent 21%, #222 21%, #2e2e2e 25%, transparent 25%), linear-gradient(to right, transparent 58%, #222 58%, #2e2e2e 64%, transparent 64%), linear-gradient(to right, transparent 92%, #222 92%, #2e2e2e 95%, transparent 95%), linear-gradient(to bottom, #111 48%, transparent 48%), linear-gradient(to right, transparent 96%, #222 96%, #2e2e2e 99%, transparent 99%), linear-gradient(to bottom, transparent 68.5%, transparent 76%, #111 76%, #111 77.5%, transparent 77.5%, transparent 86%, #111 86%, #111 87.5%, transparent 87.5%), linear-gradient(to right, transparent 35%, #222 35%, #2e2e2e 41%, transparent 41%), linear-gradient(to bottom, #111 68%, transparent 68%), linear-gradient(to right, transparent 78%, #222 78%, #222 80%, transparent 80%, transparent 82%, #222 82%, #222 83%, transparent 83%), linear-gradient(to right, transparent 66%, #222 66%, #2e2e2e 85%, transparent 85%);
+  background-size: 300px 150px;
+  background-position: center bottom;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body.light {
+  background-color: #8f8f8f;
+  background-image: linear-gradient(to top, #f0f0f0 5%, #8f8f8f 6%, #8f8f8f 7%, transparent 7%), linear-gradient(to bottom, #8f8f8f 30%, transparent 30%), linear-gradient(to right, #f0f0f0, #e0e0e0 5%, transparent 5%), linear-gradient(to right, transparent 6%, #f0f0f0 6%, #e0e0e0 9%, transparent 9%), linear-gradient(to right, transparent 27%, #f0f0f0 27%, #e0e0e0 34%, transparent 34%), linear-gradient(to right, transparent 51%, #f0f0f0 51%, #e0e0e0 57%, transparent 57%), linear-gradient(to bottom, #8f8f8f 35%, transparent 35%), linear-gradient(to right, transparent 42%, #f0f0f0 42%, #e0e0e0 44%, transparent 44%), linear-gradient(to right, transparent 45%, #f0f0f0 45%, #e0e0e0 47%, transparent 47%), linear-gradient(to right, transparent 48%, #f0f0f0 48%, #e0e0e0 50%, transparent 50%), linear-gradient(to right, transparent 87%, #f0f0f0 87%, #e0e0e0 91%, transparent 91%), linear-gradient(to bottom, #8f8f8f 37.5%, transparent 37.5%), linear-gradient(to right, transparent 14%, #f0f0f0 14%, #e0e0e0 20%, transparent 20%), linear-gradient(to bottom, #8f8f8f 40%, transparent 40%), linear-gradient(to right, transparent 10%, #f0f0f0 10%, #e0e0e0 13%, transparent 13%), linear-gradient(to right, transparent 21%, #f0f0f0 21%, #e0e0e0 25%, transparent 25%), linear-gradient(to right, transparent 58%, #f0f0f0 58%, #e0e0e0 64%, transparent 64%), linear-gradient(to right, transparent 92%, #f0f0f0 92%, #e0e0e0 95%, transparent 95%), linear-gradient(to bottom, #8f8f8f 48%, transparent 48%), linear-gradient(to right, transparent 96%, #f0f0f0 96%, #e0e0e0 99%, transparent 99%), linear-gradient(to bottom, transparent 68.5%, transparent 76%, #8f8f8f 76%, #8f8f8f 77.5%, transparent 77.5%, transparent 86%, #8f8f8f 86%, #8f8f8f 87.5%, transparent 87.5%), linear-gradient(to right, transparent 35%, #f0f0f0 35%, #e0e0e0 41%, transparent 41%), linear-gradient(to bottom, #8f8f8f 68%, transparent 68%), linear-gradient(to right, transparent 78%, #f0f0f0 78%, #f0f0f0 80%, transparent 80%, transparent 82%, #f0f0f0 82%, #f0f0f0 83%, transparent 83%), linear-gradient(to right, transparent 66%, #f0f0f0 66%, #e0e0e0 85%, transparent 85%);
+  background-size: 300px 150px;
+  background-position: center bottom;
 }
+
+body:after {
+  content: "";
+  width: 25px;
+  height: 10px;
+  position: absolute;
+  left: calc(50% + 59px);
+  bottom: 100px;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, #fff 50%, transparent 50%), radial-gradient(circle, #fff 50%, transparent 50%);
+  background-size: 10px 10px;
+  background-position: left center, right center;
+}
+
+body.light:after {
+  animation: eyes 5000ms infinite;
+  filter: invert(1);
+}
+
+body.dark:after {
+  animation: eyes 5000ms infinite;
+  color: #fff;
+}
+@keyframes eyes {
+  0%, 52% {
+    opacity: 0;
+  }
+  53%, 87% {
+    opacity: 1;
+  }
+  64% {
+    transform: scaleY(1);
+  }
+  67% {
+    transform: scaleY(0);
+  }
+  70% {
+    transform: scaleY(1);
+  }
+  88%, 100% {
+    opacity: 0;
+  }
+}
+body.light {
+  color: #000;
+}
+
+body.dark {
+  color: #fff;
+}/*# sourceMappingURL=index.css.map */

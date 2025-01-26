@@ -1,17 +1,27 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ThemeSwitcher from './components/ThemeSwitcher';
+import icons from './assets/icons/index';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+    <ThemeSwitcher />
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+const iconKeys = Object.keys(icons);
+const randomIconKey = iconKeys[Math.floor(Math.random() * iconKeys.length)];
+const randomIcon = icons[randomIconKey]; // Access the icon directly
+
+const link = document.createElement('link');
+link.rel = 'icon';
+link.href = randomIcon;
+document.head.appendChild(link);
+
 reportWebVitals();

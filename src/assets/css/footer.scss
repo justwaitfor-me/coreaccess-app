@@ -1,0 +1,42 @@
+footer {
+  background-color: transparent;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0;
+
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar-brand {
+      font-size: 1rem;
+
+      @media (max-width: 768px) {
+        font-size: 0.875rem;
+      }
+    }
+
+    a {
+      width: fit-content;
+      left: 0;
+    }
+  }
+}
+
+body.light {
+  footer {
+    span {
+      color: #333 !important;
+    }
+  }
+}
+
+body.dark {
+  footer {
+    span {
+      color: #fff !important;
+    }
+  }
+}

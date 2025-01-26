@@ -1,0 +1,484 @@
+// Sass variables
+$color-white: #fff;
+$color-black: #000;
+
+// Dark mode colors
+$dark-color-background: #111;
+$dark-color-gradient1: #222;
+$dark-color-gradient2: #2e2e2e;
+$dark-color-gradient3: #d2b48c;
+$dark-color-gradient4: #b22222;
+$dark-color-gradient5: #871a1a;
+$dark-color-gradient6: #ff6347;
+$dark-color-gradient7: #ff3814;
+$dark-color-gradient8: #556b2f;
+$dark-color-gradient9: #39481f;
+$dark-color-gradient10: #fa8072;
+$dark-color-gradient11: #f85441;
+$dark-color-gradient12: #008080;
+$dark-color-gradient13: #004d4d;
+$dark-color-gradient14: #789;
+$dark-color-gradient15: #4f5d6a;
+$dark-color-gradient16: #bdb76b;
+$dark-color-gradient17: #989244;
+$dark-color-gradient18: #808000;
+$dark-color-gradient19: #4d4d00;
+$dark-color-gradient20: #8b4513;
+$dark-color-gradient21: #5e2f0d;
+$dark-color-gradient22: #2f4f4f;
+$dark-color-gradient23: #1c2f2f;
+$dark-color-gradient24: #cd5c5c;
+$dark-color-gradient25: #bc3a3a;
+$dark-color-gradient26: #bc8f8f;
+$dark-color-gradient27: #a52a2a;
+$dark-color-gradient28: #7c2020;
+$dark-color-white: #fff;
+
+// Light mode colors
+$light-color-background: #8f8f8f;
+$light-color-gradient1: #f0f0f0;
+$light-color-gradient2: #e0e0e0;
+$light-color-gradient3: #d2b48c;
+$light-color-gradient4: #b22222;
+$light-color-gradient5: #871a1a;
+$light-color-gradient6: #ff6347;
+$light-color-gradient7: #ff3814;
+$light-color-gradient8: #556b2f;
+$light-color-gradient9: #39481f;
+$light-color-gradient10: #fa8072;
+$light-color-gradient11: #f85441;
+$light-color-gradient12: #008080;
+$light-color-gradient13: #004d4d;
+$light-color-gradient14: #789;
+$light-color-gradient15: #4f5d6a;
+$light-color-gradient16: #bdb76b;
+$light-color-gradient17: #989244;
+$light-color-gradient18: #808000;
+$light-color-gradient19: #4d4d00;
+$light-color-gradient20: #8b4513;
+$light-color-gradient21: #5e2f0d;
+$light-color-gradient22: #2f4f4f;
+$light-color-gradient23: #1c2f2f;
+$light-color-gradient24: #cd5c5c;
+$light-color-gradient25: #bc3a3a;
+$light-color-gradient26: #bc8f8f;
+$light-color-gradient27: #a52a2a;
+$light-color-gradient28: #7c2020;
+$light-color-white: #000;
+
+body.dark {
+  background-color: $dark-color-background;
+  background-image: linear-gradient(
+      to top,
+      $dark-color-gradient1 5%,
+      $dark-color-background 6%,
+      $dark-color-background 7%,
+      transparent 7%
+    ),
+    linear-gradient(to bottom, $dark-color-background 30%, transparent 30%),
+    linear-gradient(to right, $dark-color-gradient1, $dark-color-gradient2 5%, transparent 5%),
+    linear-gradient(
+      to right,
+      transparent 6%,
+      $dark-color-gradient1 6%,
+      $dark-color-gradient2 9%,
+      transparent 9%
+    ),
+    linear-gradient(
+      to right,
+      transparent 27%,
+      $dark-color-gradient1 27%,
+      $dark-color-gradient2 34%,
+      transparent 34%
+    ),
+    linear-gradient(
+      to right,
+      transparent 51%,
+      $dark-color-gradient1 51%,
+      $dark-color-gradient2 57%,
+      transparent 57%
+    ),
+    linear-gradient(to bottom, $dark-color-background 35%, transparent 35%),
+    linear-gradient(
+      to right,
+      transparent 42%,
+      $dark-color-gradient1 42%,
+      $dark-color-gradient2 44%,
+      transparent 44%
+    ),
+    linear-gradient(
+      to right,
+      transparent 45%,
+      $dark-color-gradient1 45%,
+      $dark-color-gradient2 47%,
+      transparent 47%
+    ),
+    linear-gradient(
+      to right,
+      transparent 48%,
+      $dark-color-gradient1 48%,
+      $dark-color-gradient2 50%,
+      transparent 50%
+    ),
+    linear-gradient(
+      to right,
+      transparent 87%,
+      $dark-color-gradient1 87%,
+      $dark-color-gradient2 91%,
+      transparent 91%
+    ),
+    linear-gradient(to bottom, $dark-color-background 37.5%, transparent 37.5%),
+    linear-gradient(
+      to right,
+      transparent 14%,
+      $dark-color-gradient1 14%,
+      $dark-color-gradient2 20%,
+      transparent 20%
+    ),
+    linear-gradient(to bottom, $dark-color-background 40%, transparent 40%),
+    linear-gradient(
+      to right,
+      transparent 10%,
+      $dark-color-gradient1 10%,
+      $dark-color-gradient2 13%,
+      transparent 13%
+    ),
+    linear-gradient(
+      to right,
+      transparent 21%,
+      $dark-color-gradient1 21%,
+      $dark-color-gradient2 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      to right,
+      transparent 58%,
+      $dark-color-gradient1 58%,
+      $dark-color-gradient2 64%,
+      transparent 64%
+    ),
+    linear-gradient(
+      to right,
+      transparent 92%,
+      $dark-color-gradient1 92%,
+      $dark-color-gradient2 95%,
+      transparent 95%
+    ),
+    linear-gradient(to bottom, $dark-color-background 48%, transparent 48%),
+    linear-gradient(
+      to right,
+      transparent 96%,
+      $dark-color-gradient1 96%,
+      $dark-color-gradient2 99%,
+      transparent 99%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 68.5%,
+      transparent 76%,
+      $dark-color-background 76%,
+      $dark-color-background 77.5%,
+      transparent 77.5%,
+      transparent 86%,
+      $dark-color-background 86%,
+      $dark-color-background 87.5%,
+      transparent 87.5%
+    ),
+    linear-gradient(
+      to right,
+      transparent 35%,
+      $dark-color-gradient1 35%,
+      $dark-color-gradient2 41%,
+      transparent 41%
+    ),
+    linear-gradient(to bottom, $dark-color-background 68%, transparent 68%),
+    linear-gradient(
+      to right,
+      transparent 78%,
+      $dark-color-gradient1 78%,
+      $dark-color-gradient1 80%,
+      transparent 80%,
+      transparent 82%,
+      $dark-color-gradient1 82%,
+      $dark-color-gradient1 83%,
+      transparent 83%
+    ),
+    linear-gradient(
+      to right,
+      transparent 66%,
+      $dark-color-gradient1 66%,
+      $dark-color-gradient2 85%,
+      transparent 85%
+    );
+  background-size: 300px 150px;
+  background-position: center bottom;
+}
+
+body.light {
+  background-color: $light-color-background;
+  background-image: linear-gradient(
+      to top,
+      $light-color-gradient1 5%,
+      $light-color-background 6%,
+      $light-color-background 7%,
+      transparent 7%
+    ),
+    linear-gradient(to bottom, $light-color-background 30%, transparent 30%),
+    linear-gradient(to right, $light-color-gradient1, $light-color-gradient2 5%, transparent 5%),
+    linear-gradient(
+      to right,
+      transparent 6%,
+      $light-color-gradient1 6%,
+      $light-color-gradient2 9%,
+      transparent 9%
+    ),
+    linear-gradient(
+      to right,
+      transparent 27%,
+      $light-color-gradient1 27%,
+      $light-color-gradient2 34%,
+      transparent 34%
+    ),
+    linear-gradient(
+      to right,
+      transparent 51%,
+      $light-color-gradient1 51%,
+      $light-color-gradient2 57%,
+      transparent 57%
+    ),
+    linear-gradient(to bottom, $light-color-background 35%, transparent 35%),
+    linear-gradient(
+      to right,
+      transparent 42%,
+      $light-color-gradient1 42%,
+      $light-color-gradient2 44%,
+      transparent 44%
+    ),
+    linear-gradient(
+      to right,
+      transparent 45%,
+      $light-color-gradient1 45%,
+      $light-color-gradient2 47%,
+      transparent 47%
+    ),
+    linear-gradient(
+      to right,
+      transparent 48%,
+      $light-color-gradient1 48%,
+      $light-color-gradient2 50%,
+      transparent 50%
+    ),
+    linear-gradient(
+      to right,
+      transparent 87%,
+      $light-color-gradient1 87%,
+      $light-color-gradient2 91%,
+      transparent 91%
+    ),
+    linear-gradient(to bottom, $light-color-background 37.5%, transparent 37.5%),
+    linear-gradient(
+      to right,
+      transparent 14%,
+      $light-color-gradient1 14%,
+      $light-color-gradient2 20%,
+      transparent 20%
+    ),
+    linear-gradient(to bottom, $light-color-background 40%, transparent 40%),
+    linear-gradient(
+      to right,
+      transparent 10%,
+      $light-color-gradient1 10%,
+      $light-color-gradient2 13%,
+      transparent 13%
+    ),
+    linear-gradient(
+      to right,
+      transparent 21%,
+      $light-color-gradient1 21%,
+      $light-color-gradient2 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      to right,
+      transparent 58%,
+      $light-color-gradient1 58%,
+      $light-color-gradient2 64%,
+      transparent 64%
+    ),
+    linear-gradient(
+      to right,
+      transparent 92%,
+      $light-color-gradient1 92%,
+      $light-color-gradient2 95%,
+      transparent 95%
+    ),
+    linear-gradient(to bottom, $light-color-background 48%, transparent 48%),
+    linear-gradient(
+      to right,
+      transparent 96%,
+      $light-color-gradient1 96%,
+      $light-color-gradient2 99%,
+      transparent 99%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 68.5%,
+      transparent 76%,
+      $light-color-background 76%,
+      $light-color-background 77.5%,
+      transparent 77.5%,
+      transparent 86%,
+      $light-color-background 86%,
+      $light-color-background 87.5%,
+      transparent 87.5%
+    ),
+    linear-gradient(
+      to right,
+      transparent 35%,
+      $light-color-gradient1 35%,
+      $light-color-gradient2 41%,
+      transparent 41%
+    ),
+    linear-gradient(to bottom, $light-color-background 68%, transparent 68%),
+    linear-gradient(
+      to right,
+      transparent 78%,
+      $light-color-gradient1 78%,
+      $light-color-gradient1 80%,
+      transparent 80%,
+      transparent 82%,
+      $light-color-gradient1 82%,
+      $light-color-gradient1 83%,
+      transparent 83%
+    ),
+    linear-gradient(
+      to right,
+      transparent 66%,
+      $light-color-gradient1 66%,
+      $light-color-gradient2 85%,
+      transparent 85%
+    );
+  background-size: 300px 150px;
+  background-position: center bottom;
+}
+
+
+body:after {
+  content: "";
+  width: 25px;
+  height: 10px;
+  position: absolute;
+  left: calc(50% + 59px);
+  bottom: 100px;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, $color-white 50%, transparent 50%),
+    radial-gradient(circle, $color-white 50%, transparent 50%);
+  background-size: 10px 10px;
+  background-position: left center, right center;
+}
+
+body.light:after {
+  animation: eyes 5000ms infinite;
+  filter: invert(1);
+}
+
+body.dark:after {
+  animation: eyes 5000ms infinite;
+  color: $color-white;
+}
+
+@-moz-keyframes eyes {
+  0%,
+  52% {
+    opacity: 0;
+  }
+  53%,
+  87% {
+    opacity: 1;
+  }
+  64% {
+    transform: scaleY(1);
+  }
+  67% {
+    transform: scaleY(0);
+  }
+  70% {
+    transform: scaleY(1);
+  }
+  88%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes eyes {
+  0%,
+  52% {
+    opacity: 0;
+  }
+  53%,
+  87% {
+    opacity: 1;
+  }
+  64% {
+    transform: scaleY(1);
+  }
+  67% {
+    transform: scaleY(0);
+  }
+  70% {
+    transform: scaleY(1);
+  }
+  88%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes eyes {
+  0%,
+  52% {
+    opacity: 0;
+  }
+  53%,
+  87% {
+    opacity: 1;
+  }
+  64% {
+    transform: scaleY(1);
+  }
+  67% {
+    transform: scaleY(0);
+  }
+  70% {
+    transform: scaleY(1);
+  }
+  88%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes eyes {
+  0%,
+  52% {
+    opacity: 0;
+  }
+  53%,
+  87% {
+    opacity: 1;
+  }
+  64% {
+    transform: scaleY(1);
+  }
+  67% {
+    transform: scaleY(0);
+  }
+  70% {
+    transform: scaleY(1);
+  }
+  88%,
+  100% {
+    opacity: 0;
+  }
+}
