@@ -9,7 +9,7 @@ function Footer() {
             <div className="container-fluid">
                 <span className="navbar-brand mx-auto">© 2025 justwaitforme.de. All rights reserved.</span>
                 <a href="https://github.com/justwaitfor-me/coreaccess-app" className="btn btn-primary">
-                    <i className="bi bi-github"></i>
+                    <i className="bi bi-github github-link"></i>
                 </a>
             </div>
         </footer>

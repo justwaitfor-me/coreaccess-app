@@ -1,11 +1,23 @@
 // src/index.scss
 @import './assets/scss/_background.scss';
+@import './assets/scss/_theme.scss';
 
+body {
+    height: 100vh;
+    overflow: hidden;
 
-body.light {
-    color: #000;
+    padding: 0;
+    margin: 0;;
 }
 
-body.dark {
-    color: #fff;
+#root {
+    margin-top: 35px !important;
+    margin-bottom: 150px !important;
+
+    position: sticky;
+    z-index: 1000;
+
+    max-height: 80%;
+    overflow-y: auto;
 }
+

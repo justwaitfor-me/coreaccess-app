@@ -25,6 +25,7 @@ function ForgotPassword() {
               required
             />
           </Form.Group>
+          <br />
           <FormHandler
             onSubmit={handlePasswordReset}
             buttonText="Send Reset Link"

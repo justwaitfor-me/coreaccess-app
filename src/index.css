@@ -1,18 +1,36 @@
-body.dark {
+body.light #background {
   background-color: #111;
   background-image: linear-gradient(to top, #222 5%, #111 6%, #111 7%, transparent 7%), linear-gradient(to bottom, #111 30%, transparent 30%), linear-gradient(to right, #222, #2e2e2e 5%, transparent 5%), linear-gradient(to right, transparent 6%, #222 6%, #2e2e2e 9%, transparent 9%), linear-gradient(to right, transparent 27%, #222 27%, #2e2e2e 34%, transparent 34%), linear-gradient(to right, transparent 51%, #222 51%, #2e2e2e 57%, transparent 57%), linear-gradient(to bottom, #111 35%, transparent 35%), linear-gradient(to right, transparent 42%, #222 42%, #2e2e2e 44%, transparent 44%), linear-gradient(to right, transparent 45%, #222 45%, #2e2e2e 47%, transparent 47%), linear-gradient(to right, transparent 48%, #222 48%, #2e2e2e 50%, transparent 50%), linear-gradient(to right, transparent 87%, #222 87%, #2e2e2e 91%, transparent 91%), linear-gradient(to bottom, #111 37.5%, transparent 37.5%), linear-gradient(to right, transparent 14%, #222 14%, #2e2e2e 20%, transparent 20%), linear-gradient(to bottom, #111 40%, transparent 40%), linear-gradient(to right, transparent 10%, #222 10%, #2e2e2e 13%, transparent 13%), linear-gradient(to right, transparent 21%, #222 21%, #2e2e2e 25%, transparent 25%), linear-gradient(to right, transparent 58%, #222 58%, #2e2e2e 64%, transparent 64%), linear-gradient(to right, transparent 92%, #222 92%, #2e2e2e 95%, transparent 95%), linear-gradient(to bottom, #111 48%, transparent 48%), linear-gradient(to right, transparent 96%, #222 96%, #2e2e2e 99%, transparent 99%), linear-gradient(to bottom, transparent 68.5%, transparent 76%, #111 76%, #111 77.5%, transparent 77.5%, transparent 86%, #111 86%, #111 87.5%, transparent 87.5%), linear-gradient(to right, transparent 35%, #222 35%, #2e2e2e 41%, transparent 41%), linear-gradient(to bottom, #111 68%, transparent 68%), linear-gradient(to right, transparent 78%, #222 78%, #222 80%, transparent 80%, transparent 82%, #222 82%, #222 83%, transparent 83%), linear-gradient(to right, transparent 66%, #222 66%, #2e2e2e 85%, transparent 85%);
   background-size: 300px 150px;
   background-position: center bottom;
 }
+body.light #background:after {
+  animation: eyes 5000ms infinite;
+  filter: invert(1);
+}
 
-body.light {
+body.dark #background {
   background-color: #8f8f8f;
   background-image: linear-gradient(to top, #f0f0f0 5%, #8f8f8f 6%, #8f8f8f 7%, transparent 7%), linear-gradient(to bottom, #8f8f8f 30%, transparent 30%), linear-gradient(to right, #f0f0f0, #e0e0e0 5%, transparent 5%), linear-gradient(to right, transparent 6%, #f0f0f0 6%, #e0e0e0 9%, transparent 9%), linear-gradient(to right, transparent 27%, #f0f0f0 27%, #e0e0e0 34%, transparent 34%), linear-gradient(to right, transparent 51%, #f0f0f0 51%, #e0e0e0 57%, transparent 57%), linear-gradient(to bottom, #8f8f8f 35%, transparent 35%), linear-gradient(to right, transparent 42%, #f0f0f0 42%, #e0e0e0 44%, transparent 44%), linear-gradient(to right, transparent 45%, #f0f0f0 45%, #e0e0e0 47%, transparent 47%), linear-gradient(to right, transparent 48%, #f0f0f0 48%, #e0e0e0 50%, transparent 50%), linear-gradient(to right, transparent 87%, #f0f0f0 87%, #e0e0e0 91%, transparent 91%), linear-gradient(to bottom, #8f8f8f 37.5%, transparent 37.5%), linear-gradient(to right, transparent 14%, #f0f0f0 14%, #e0e0e0 20%, transparent 20%), linear-gradient(to bottom, #8f8f8f 40%, transparent 40%), linear-gradient(to right, transparent 10%, #f0f0f0 10%, #e0e0e0 13%, transparent 13%), linear-gradient(to right, transparent 21%, #f0f0f0 21%, #e0e0e0 25%, transparent 25%), linear-gradient(to right, transparent 58%, #f0f0f0 58%, #e0e0e0 64%, transparent 64%), linear-gradient(to right, transparent 92%, #f0f0f0 92%, #e0e0e0 95%, transparent 95%), linear-gradient(to bottom, #8f8f8f 48%, transparent 48%), linear-gradient(to right, transparent 96%, #f0f0f0 96%, #e0e0e0 99%, transparent 99%), linear-gradient(to bottom, transparent 68.5%, transparent 76%, #8f8f8f 76%, #8f8f8f 77.5%, transparent 77.5%, transparent 86%, #8f8f8f 86%, #8f8f8f 87.5%, transparent 87.5%), linear-gradient(to right, transparent 35%, #f0f0f0 35%, #e0e0e0 41%, transparent 41%), linear-gradient(to bottom, #8f8f8f 68%, transparent 68%), linear-gradient(to right, transparent 78%, #f0f0f0 78%, #f0f0f0 80%, transparent 80%, transparent 82%, #f0f0f0 82%, #f0f0f0 83%, transparent 83%), linear-gradient(to right, transparent 66%, #f0f0f0 66%, #e0e0e0 85%, transparent 85%);
   background-size: 300px 150px;
   background-position: center bottom;
 }
+body.dark #background:after {
+  animation: eyes 5000ms infinite;
+  color: #fff;
+}
 
-body:after {
+#background {
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  animation: flashlight 10000ms infinite;
+  position: absolute;
+}
+
+#background:after {
   content: "";
   width: 25px;
   height: 10px;
@@ -24,15 +42,82 @@ body:after {
   background-size: 10px 10px;
   background-position: left center, right center;
 }
-
-body.light:after {
-  animation: eyes 5000ms infinite;
-  filter: invert(1);
-}
-
-body.dark:after {
-  animation: eyes 5000ms infinite;
-  color: #fff;
+@keyframes flashlight {
+  0%, 9% {
+    opacity: 0;
+    -webkit-clip-path: circle(100px at 45% 10%);
+            clip-path: circle(100px at 45% 10%);
+  }
+  10%, 15%, 85% {
+    opacity: 1;
+  }
+  20% {
+    -webkit-clip-path: circle(100px at 30% 40%);
+            clip-path: circle(100px at 30% 40%);
+  }
+  30% {
+    -webkit-clip-path: circle(100px at 60% 50%);
+            clip-path: circle(100px at 60% 50%);
+  }
+  35% {
+    -webkit-clip-path: circle(100px at 70% 40%);
+            clip-path: circle(100px at 70% 40%);
+  }
+  40% {
+    -webkit-clip-path: circle(100px at 70% 30%);
+            clip-path: circle(100px at 70% 30%);
+  }
+  45% {
+    -webkit-clip-path: circle(100px at 60% 25%);
+            clip-path: circle(100px at 60% 25%);
+  }
+  50% {
+    -webkit-clip-path: circle(100px at 50% 20%);
+            clip-path: circle(100px at 50% 20%);
+  }
+  55% {
+    -webkit-clip-path: circle(100px at 50% 40%);
+            clip-path: circle(100px at 50% 40%);
+  }
+  60% {
+    -webkit-clip-path: circle(100px at 50% 70%);
+            clip-path: circle(100px at 50% 70%);
+  }
+  65% {
+    -webkit-clip-path: circle(100px at 40% 60%);
+            clip-path: circle(100px at 40% 60%);
+  }
+  70% {
+    -webkit-clip-path: circle(100px at 40% 50%);
+            clip-path: circle(100px at 40% 50%);
+  }
+  75% {
+    -webkit-clip-path: circle(100px at 30% 60%);
+            clip-path: circle(100px at 30% 60%);
+  }
+  80% {
+    -webkit-clip-path: circle(100px at 20% 60%);
+            clip-path: circle(100px at 20% 60%);
+  }
+  85% {
+    -webkit-clip-path: circle(100px at 30% 70%);
+            clip-path: circle(100px at 30% 70%);
+  }
+  90% {
+    -webkit-clip-path: circle(100px at 30% 80%);
+            clip-path: circle(100px at 30% 80%);
+  }
+  95% {
+    -webkit-clip-path: circle(100px at 40% 90%);
+            clip-path: circle(100px at 40% 90%);
+  }
+  100% {
+    -webkit-clip-path: circle(100px at 55% 92%);
+            clip-path: circle(100px at 55% 92%);
+  }
+  88%, 100% {
+    opacity: 0;
+  }
 }
 @keyframes eyes {
   0%, 52% {
@@ -55,9 +140,77 @@ body.dark:after {
   }
 }
 body.light {
-  color: #000;
+  color: #ffffff;
+  background-image: linear-gradient(291.7deg, rgb(255, 134, 134) 21.5%, rgb(249, 141, 255) 93.1%);
 }
 
 body.dark {
-  color: #fff;
+  color: #000000;
+  background-image: linear-gradient(109.6deg, rgb(102, 51, 153) 11.2%, rgb(2, 0, 4) 91.1%);
+}
+
+body.light.primary {
+  background-image: linear-gradient(135deg, rgb(0, 123, 255) 0%, rgba(0, 123, 255, 0.5) 100%);
+}
+body.light.secondary {
+  background-image: linear-gradient(135deg, rgb(108, 117, 125) 0%, rgba(108, 117, 125, 0.5) 100%);
+}
+body.light.success {
+  background-image: linear-gradient(135deg, rgb(40, 167, 69) 0%, rgba(40, 167, 69, 0.5) 100%);
+}
+body.light.danger {
+  background-image: linear-gradient(135deg, rgb(220, 53, 69) 0%, rgba(220, 53, 69, 0.5) 100%);
+}
+body.light.warning {
+  background-image: linear-gradient(135deg, rgb(255, 193, 7) 0%, rgba(255, 193, 7, 0.5) 100%);
+}
+body.light.info {
+  background-image: linear-gradient(135deg, rgb(23, 162, 184) 0%, rgba(23, 162, 184, 0.5) 100%);
+}
+body.light.light {
+  background-image: linear-gradient(135deg, rgb(248, 249, 250) 0%, rgba(248, 249, 250, 0.5) 100%);
+}
+body.light.dark {
+  background-image: linear-gradient(135deg, rgb(52, 58, 64) 0%, rgba(52, 58, 64, 0.5) 100%);
+}
+
+body.dark.primary {
+  background-image: linear-gradient(135deg, rgb(0, 123, 255) 0%, rgba(0, 123, 255, 0.8) 100%);
+}
+body.dark.secondary {
+  background-image: linear-gradient(135deg, rgb(108, 117, 125) 0%, rgba(108, 117, 125, 0.8) 100%);
+}
+body.dark.success {
+  background-image: linear-gradient(135deg, rgb(40, 167, 69) 0%, rgba(40, 167, 69, 0.8) 100%);
+}
+body.dark.danger {
+  background-image: linear-gradient(135deg, rgb(220, 53, 69) 0%, rgba(220, 53, 69, 0.8) 100%);
+}
+body.dark.warning {
+  background-image: linear-gradient(135deg, rgb(255, 193, 7) 0%, rgba(255, 193, 7, 0.8) 100%);
+}
+body.dark.info {
+  background-image: linear-gradient(135deg, rgb(23, 162, 184) 0%, rgba(23, 162, 184, 0.8) 100%);
+}
+body.dark.light {
+  background-image: linear-gradient(135deg, rgb(248, 249, 250) 0%, rgba(248, 249, 250, 0.8) 100%);
+}
+body.dark.dark {
+  background-image: linear-gradient(135deg, rgb(52, 58, 64) 0%, rgba(52, 58, 64, 0.8) 100%);
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  margin-top: 35px !important;
+  margin-bottom: 150px !important;
+  position: sticky;
+  z-index: 1000;
+  max-height: 80%;
+  overflow-y: auto;
 }/*# sourceMappingURL=index.css.map */

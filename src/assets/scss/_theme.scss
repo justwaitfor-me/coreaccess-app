@@ -1,0 +1,63 @@
+body.light {
+    color: #ffffff;
+    background-image: linear-gradient( 291.7deg,  rgba(255,134,134,1) 21.5%, rgba(249,141,255,1) 93.1% );
+}
+
+body.dark {
+    color: #000000;
+    background-image: linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% );
+}
+
+body.light {
+    &.primary {
+        background-image: linear-gradient( 135deg, rgba(0,123,255,1) 0%, rgba(0,123,255,0.5) 100% );
+    }
+    &.secondary {
+        background-image: linear-gradient( 135deg, rgba(108,117,125,1) 0%, rgba(108,117,125,0.5) 100% );
+    }
+    &.success {
+        background-image: linear-gradient( 135deg, rgba(40,167,69,1) 0%, rgba(40,167,69,0.5) 100% );
+    }
+    &.danger {
+        background-image: linear-gradient( 135deg, rgba(220,53,69,1) 0%, rgba(220,53,69,0.5) 100% );
+    }
+    &.warning {
+        background-image: linear-gradient( 135deg, rgba(255,193,7,1) 0%, rgba(255,193,7,0.5) 100% );
+    }
+    &.info {
+        background-image: linear-gradient( 135deg, rgba(23,162,184,1) 0%, rgba(23,162,184,0.5) 100% );
+    }
+    &.light {
+        background-image: linear-gradient( 135deg, rgba(248,249,250,1) 0%, rgba(248,249,250,0.5) 100% );
+    }
+    &.dark {
+        background-image: linear-gradient( 135deg, rgba(52,58,64,1) 0%, rgba(52,58,64,0.5) 100% );
+    }
+}
+
+body.dark {
+    &.primary {
+        background-image: linear-gradient( 135deg, rgba(0,123,255,1) 0%, rgba(0,123,255,0.8) 100% );
+    }
+    &.secondary {
+        background-image: linear-gradient( 135deg, rgba(108,117,125,1) 0%, rgba(108,117,125,0.8) 100% );
+    }
+    &.success {
+        background-image: linear-gradient( 135deg, rgba(40,167,69,1) 0%, rgba(40,167,69,0.8) 100% );
+    }
+    &.danger {
+        background-image: linear-gradient( 135deg, rgba(220,53,69,1) 0%, rgba(220,53,69,0.8) 100% );
+    }
+    &.warning {
+        background-image: linear-gradient( 135deg, rgba(255,193,7,1) 0%, rgba(255,193,7,0.8) 100% );
+    }
+    &.info {
+        background-image: linear-gradient( 135deg, rgba(23,162,184,1) 0%, rgba(23,162,184,0.8) 100% );
+    }
+    &.light {
+        background-image: linear-gradient( 135deg, rgba(248,249,250,1) 0%, rgba(248,249,250,0.8) 100% );
+    }
+    &.dark {
+        background-image: linear-gradient( 135deg, rgba(52,58,64,1) 0%, rgba(52,58,64,0.8) 100% );
+    }
+}

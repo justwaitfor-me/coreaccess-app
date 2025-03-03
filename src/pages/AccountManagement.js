@@ -1,14 +1,8 @@
 import React from 'react';
-import { Container, Row, Form } from 'react-bootstrap';
-import FormHandler from '../components/FormHandler';
+import { Container, Row} from 'react-bootstrap';
 import { Breadcrumb } from 'react-bootstrap';
 
 function AccountManagement(arg) {
-  const handleUpdateAccount = async () => {
-    // Simulate account update logic
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-  };
-
   console.log(arg.username);
 
 
@@ -20,27 +14,20 @@ function AccountManagement(arg) {
           <Breadcrumb.Item active>Account Management</Breadcrumb.Item>
         </Breadcrumb>
         <h2>Account Management</h2>
-        <Form>
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-          </Form.Group>
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-          </Form.Group>
-          <Form.Group controlId="formBasicName">
-            <Form.Label>Name</Form.Label>
-            <Form.Control type="text" placeholder="Enter your name" />
-          </Form.Group>
-          <br />
-          <FormHandler
-            onSubmit={handleUpdateAccount}
-            buttonText="Update Account"
-            successMessage="Account updated successfully."
-            errorMessage="Failed to update account. Please try again."
+        <div className="me-3" style={{ marginBottom: '15px' }}>
+          <img
+            id="profile-pic"
+            src="https://picsum.photos/seed/auth/200"
+            alt="Profile"
+            className="img-thumbnail"
+            style={{ width: '200px', height: '200px' }}
           />
-        </Form>
+        </div>
+        <div className="d-flex flex-column">
+          <p className='flex-inline justify-content-space-between bg-light rounded-2'><strong>Username:</strong> {arg.username} <button className='bg-dark rounded'>&gt;</button></p>
+          <p className='flex-inline justify-content-space-between bg-light rounded-2'><strong>Username:</strong> {arg.username} <button>&gt;</button></p>
+          <p className='flex-inline justify-content-space-between bg-light rounded-2'><strong>Username:</strong> {arg.username} <button>&gt;</button></p>
+        </div>
       </Row>
     </Container>
   );
